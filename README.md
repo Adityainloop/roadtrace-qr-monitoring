@@ -1,4 +1,4 @@
-# 🚧 ROADTRACE – QR-Based Road Transparency & Monitoring System
+# 🚧 ROADTRACE – QR-Based Road Transparency Monitoring System
 
 ROADTRACE is a civic-tech web platform designed to improve transparency and accountability in road infrastructure.
 
