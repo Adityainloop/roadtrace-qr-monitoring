@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROADTRACE | Report Road Issue</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header hazard-header">
+    <div class="page-title">Report Road Issue</div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container fade-in">
+    <section class="card">
+      <h2>Issue Details</h2>
+
+      <div class="card-stack">
+        <form id="reportForm">
+
+          <!-- ISSUE TYPE -->
+          <div class="mb-3">
+            <label class="form-label">Issue Type</label>
+            <select class="form-select" id="issueType" name="issueType" required>
+              <option value="">Select issue</option>
+              <option value="Pothole">Pothole</option>
+              <option value="Cracks">Cracks</option>
+              <option value="Water Logging">Water Logging</option>
+              <option value="Uneven Road Surface">Uneven Road Surface</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- SEVERITY -->
+          <div class="mb-4">
+            <label class="form-label">Severity Level (1 = Low, 5 = Critical)</label>
+            <input type="range" class="form-range" id="severity" name="severity" min="1" max="5" value="3">
+
+            <div class="d-flex justify-content-between px-1">
+              <small>1</small><small>2</small><small>3</small><small>4</small><small>5</small>
+            </div>
+
+            <div class="text-muted mt-1">
+              Selected: <span id="severityValue">3</span>
+            </div>
+          </div>
+
+          <!-- ROAD IMPACT -->
+          <div class="mb-4">
+            <div class="card">
+              <h5 class="forms-text">Road Impact</h5>
+
+              <label class="form-label">Traffic Impact</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="trafficImpact" value="Minor inconvenience">
+                <label class="form-check-label">Minor inconvenience</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="trafficImpact" value="Traffic slows down">
+                <label class="form-check-label">Traffic slows down</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="trafficImpact" value="Frequent traffic jams">
+                <label class="form-check-label">Frequent traffic jams</label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" name="trafficImpact" value="Road almost unusable">
+                <label class="form-check-label">Road almost unusable</label>
+              </div>
+
+              <label class="form-label">Safety Risk</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="safetyRisk" value="Accident-prone">
+                <label class="form-check-label">Accident‑prone</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="safetyRisk" value="Two-wheelers at high risk">
+                <label class="form-check-label">Two‑wheelers at high risk</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="safetyRisk" value="Pedestrian danger">
+                <label class="form-check-label">Pedestrian danger</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="safetyRisk" value="School or hospital nearby">
+                <label class="form-check-label">School / hospital nearby</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- DURATION -->
+          <div class="mb-4">
+            <div class="card">
+              <h5>Duration of the Problem</h5>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="duration" value="Less than 1 week">
+                <label class="form-check-label">Less than 1 week</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="duration" value="1–3 months">
+                <label class="form-check-label">1–3 months</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="duration" value="3–6 months">
+                <label class="form-check-label">3–6 months</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="duration" value="More than 6 months">
+                <label class="form-check-label">More than 6 months</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- IMAGE -->
+          <div class="mb-4">
+            <div class="card">
+              <label class="form-label">Upload Image (optional)</label>
+              <input type="file" class="form-control" id="issueImage" name="issueImage" accept="image/*">
+            </div>
+          </div>
+
+          <!-- SUBMIT -->
+          <div class="text-center">
+            <button type="submit" class="btn btn-danger px-4">
+              Submit Report
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <div class="text-center mt-3">
+      <a href="index.html" class="btn btn-info">← Back to Road Information</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 ROADTRACE | Citizen Reporting Module</p>
+  </footer>
+
+  <!-- JS (ONLY ONCE) -->
+  <script type="module" src="js/report.js"></script>
+
+  <script>
+    const severity = document.getElementById("severity");
+    const severityValue = document.getElementById("severityValue");
+    severity.addEventListener("input", () => {
+      severityValue.textContent = severity.value;
+    });
+  </script>
+
+</body>
+</html>

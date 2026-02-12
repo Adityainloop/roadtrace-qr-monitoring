@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROADTRACE | Road Information</title>
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="index">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- HEADER -->
+  <header class="header hazard-header">
+    <div class="page-title">RoadTrace</div>
+
+    
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container fade-in">
+      <div class="card-stack">
+
+    <!-- ROAD BASIC INFO -->
+    <section class="card">
+      <h2>Road Information</h2>
+
+      <div class="info-grid">
+        <div><span>Road Name:</span> <p id="roadName">Loading...</p></div>
+        <div><span>Area / Ward:</span> <p id="area">Loading...</p></div>
+        <div><span>City:</span> <p id="city">Loading...</p></div>
+        <div><span>Authority:</span> <p id="authority">Loading...</p></div>
+      </div>
+    </section>
+
+    <!-- CONSTRUCTION DETAILS -->
+    <section class="card">
+      <h2>Construction Details</h2>
+
+      <div class="info-grid">
+        <div><span>Construction Year:</span> <p id="constructionYear">Loading...</p></div>
+        <div><span>Contractor:</span> <p id="contractor">Loading...</p></div>
+        <div><span>Road Budget:</span> <p id="budget">Loading...</p></div>
+        <div><span>Last Maintenance:</span> <p id="lastMaintenance">Loading...</p></div>
+      </div>
+    </section>
+
+    <!-- ROAD HEALTH STATUS -->
+    <section class="card">
+      <h2>Road Health Status</h2>
+
+      <div class="health-box">
+        <h3 id="healthStatus">Calculating...</h3>
+        <p>Road Health Index (RHI)</p>
+      </div>
+    </section>
+
+    <!-- ACTION BUTTON -->
+    <section class="action-section">
+      <a href="report.html" class="report-btn">Report an Issue</a>
+    </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 ROADTRACE | Civic Transparency Project</p>
+  </footer>
+
+</body>
+</html>
+
+<script type="module" src="js/road.js"></script>
